@@ -1,19 +1,21 @@
-{%set name = "requestsexceptions" %}
-{%set version = "1.3.0" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "8f141ba636d6748cd29208c1955bde38bf00fcdda1a685bc09d8ed133700353e" %}
+{% set name = "requestsexceptions" %}
+{% set version = "1.3.0" %}
+{% set bundle = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash = "8f141ba636d6748cd29208c1955bde38bf00fcdda1a685bc09d8ed133700353e" %}
+{% set build = 0 %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash_val }}
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  {{ hash_type }}: {{ hash }}
 
 build:
-  number: 0
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 
@@ -21,11 +23,10 @@ requirements:
   build:
     - python
     - setuptools
-    - pbr >=0.11,<2.0
+    - pbr >=2.0.0
 
   run:
     - python
-    - pbr >=0.11,<2.0
 
 test:
   imports:
@@ -33,8 +34,11 @@ test:
 
 about:
   home: https://github.com/openstack-infra/requestsexceptions
+  license_file: {{ RECIPE_DIR }}/LICENSE
   license: Apache 2.0
+  license_family: Apache
   summary: 'Import exceptions from potentially bundled packages in requests.'
+  dev_url: https://github.com/openstack-infra/requestsexceptions
 
 extra:
   recipe-maintainers:
