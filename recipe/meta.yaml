@@ -1,7 +1,7 @@
 {%set name = "requestsexceptions" %}
-{%set version = "1.2.0" %}
+{%set version = "1.3.0" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "8b762ba6ec5f4f5af50bdd3ab07184a0e63803d70e8b1bbbd429a8f5216fe13d" %}
+{%set hash_val = "8f141ba636d6748cd29208c1955bde38bf00fcdda1a685bc09d8ed133700353e" %}
 
 package:
   name: {{ name }}
