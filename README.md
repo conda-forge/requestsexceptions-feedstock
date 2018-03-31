@@ -14,9 +14,7 @@ Summary: Import exceptions from potentially bundled packages in requests.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/requestsexceptions-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/requestsexceptions-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/requestsexceptions-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/requestsexceptions-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/requestsexceptions-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/requestsexceptions-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/requestsexceptions-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/requestsexceptions-feedstock)
 
 Current release info
 ====================
