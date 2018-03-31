@@ -3,7 +3,6 @@
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash = "b095cbc77618f066d459a02b137b020c37da9f46d9b057704019c9f77dba3065" %}
-{% set build = 0 %}
 
 package:
   name: {{ name }}
@@ -15,6 +14,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
+  noarch: python
   number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
@@ -30,7 +30,7 @@ requirements:
 
 test:
   imports:
-    - {{ name }}
+    - requestsexceptions
 
 about:
   home: https://github.com/openstack-infra/requestsexceptions
